@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "swipe.test.app"
+        id          = "mysql.test.app"
         versionCode = "10" 
         version     = "1.0.0" >
         
-    <name>Swipe Tester</name>
+    <name>MYSQL Test</name></name>
     
     <description>
-      Testing app swipes.
+      Testing MYSQL for android app.
     </description>
     
     
