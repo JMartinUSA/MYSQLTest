@@ -11,9 +11,9 @@
 			$("#btnLogin").click(function () {
 
 				var USERNAME = document.getElementById('USERNAME').value;
-				alert(USERNAME);
+				//alert(USERNAME);
 				var PASSWORD = document.getElementById('PASSWORD').value;
-				alert(PASSWORD);
+				//alert(PASSWORD);
 
 				$.ajax({
 					url:"http://jaymartmedia.com/api.php",
@@ -23,11 +23,12 @@
 					ContentType:"application/json",
 					success: function (response)
 					{
-						alert(JSON.stringify(response));
+						//alert(JSON.stringify(response));
+						document.getElementById('output').innerHTML = JSON.stringify(response);
 					},
 					error: function (err)
 					{
-						alert(JSON.stringify(err));
+						//alert(JSON.stringify(err));
 					}
 				})
 			});
@@ -39,5 +40,8 @@
 	Username: <input type="text" id="USERNAME"></input><br>
 	Password: <input type="text" id="PASSWORD"></input><br>
 	<input type="button" name="btnLogin" id="btnLogin" value="Login" />
+	<br>
+	<br>
+	<div id="output"></div>
 </body>
 </html>
