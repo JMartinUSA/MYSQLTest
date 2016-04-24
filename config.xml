@@ -5,7 +5,7 @@
         versionCode = "10" 
         version     = "1.0.0" >
         
-    <name>MYSQL Test</name></name>
+    <name>MYSQL Test</name>
     
     <description>
       Testing MYSQL for android app.
