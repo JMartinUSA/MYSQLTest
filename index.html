@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$("#btnLogin").click(function () {
+				$.ajax({
+					url:"http://jaymartmedia.com/api.php",
+					type: "GET",
+					dataType: "json",
+					data: { type:"login", UserName:"Jesse",Password:"esseJ" },
+					ContentType:"application/json",
+					success: function (response)
+					{
+						alert(JSON.stringify(response));
+					},
+					error: function (err)
+					{
+						alert(JSON.stringify(err));
+					}
+				})
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<input type="button" name="btnLogin" id="btnLogin" value="Login" />
+</body>
+</html>
