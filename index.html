@@ -5,13 +5,21 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
 	<script>
+
+
 		$(document).ready(function () {
 			$("#btnLogin").click(function () {
+
+				var USERNAME = document.getElementById('USERNAME').value;
+				alert(USERNAME);
+				var PASSWORD = document.getElementById('PASSWORD').value;
+				alert(PASSWORD);
+
 				$.ajax({
 					url:"http://jaymartmedia.com/api.php",
 					type: "GET",
 					dataType: "json",
-					data: { type:"login", UserName:"Jesse",Password:"esseJ" },
+					data: { type:"login", UserName:USERNAME,Password:PASSWORD },
 					ContentType:"application/json",
 					success: function (response)
 					{
@@ -28,6 +36,8 @@
 	</script>
 </head>
 <body>
+	Username: <input type="text" id="USERNAME"></input>
+	Password: <input type="text" id="PASSWORD"></input>
 	<input type="button" name="btnLogin" id="btnLogin" value="Login" />
 </body>
 </html>
